@@ -31,7 +31,8 @@ main{display:flex;flex-direction:column}
 .destination-card,.more-card{height:225px;border-radius:12px;box-shadow:0 8px 16px rgba(26,48,54,.13)}
 .destination-card:after{background:linear-gradient(180deg,rgba(0,0,0,.02) 20%,rgba(8,22,24,.76) 100%)}
 .card-bardiya{background:#153d45}
-.card-bardiya img{object-fit:contain;object-position:center;background:#153d45}
+.card-bardiya img{object-fit:cover;object-position:left center;background:transparent}
+.card-bardiya:after{background:linear-gradient(0deg,rgba(8,22,24,.42),transparent 46%)}
 .place-number{display:none}
 .place-name{left:16px;bottom:43px;font:700 20px/1.2 var(--sans);text-shadow:0 1px 4px #1b2929}
 .place-name b{display:none}
