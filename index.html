@@ -1,0 +1,83 @@
+-<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f7f1">
+  <meta name="description" content="Book a comfortable electric cab to Nepal's favourite destinations.">
+  <title>Yatra EV — Nepal, at your pace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="E-Drive Cabs Nepal home"><span class="brand-mark"><img src="assets/windsor-ev-logo.jpg" alt=""></span><span>E-Drive Cabs<span class="brand-ev"> Nepal</span><small>CLEAN · GREEN · RELIABLE</small></span></a>
+    <nav><a href="#destinations">Discover Nepal</a><a href="#booking">Book a ride</a></nav>
+    <a class="call-link" href="tel:+9779843670623"><span>Need a ride?</span> +977 9843670623</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> ELECTRIC RIDES, NEPALI HEART</span>
+        <h1>E-Drive Cabs Nepal</h1>
+        <p>Clean, Green &amp; Reliable Himalayan Electric Cab Rides</p>
+        <a class="hero-cta" href="#booking">Book your ride <span>↘</span></a>
+        <div class="hero-note"><span class="mountain-glyph">⌁</span><span>नेपालको सुन्दर यात्रा<br><small>A beautiful journey through Nepal</small></span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Himalayan mountains and colorful prayer flags"><div class="sun"></div><div class="peak peak-back"></div><div class="peak peak-mid"></div><div class="peak peak-front"></div><div class="hill hill-one"></div><div class="hill hill-two"></div><div class="art-caption"><span>01 / 07</span><span>THE HIMALAYAN HIGHWAYS</span></div><div class="vertical-note">SAJILO · SWACHHA · SURAKSHIT</div></div>
+      <div class="hero-counter"><strong>01</strong><span>—</span><span>Journey<br>starts here</span></div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="section-heading"><div><span class="eyebrow">YOUR NEXT ADVENTURE</span><h2>Book your electric cab</h2></div></div>
+      <form id="bookingForm">
+        <div class="route-grid">
+          <div class="field-card"><label for="pickup">Pickup Location</label><div class="input-with-icon"><span class="pin-dot"></span><input id="pickup" name="pickup" placeholder="City, neighbourhood or landmark" required autocomplete="street-address"></div><div class="field-actions"><button type="button" class="text-action" id="currentLocation">◎ Use my current location</button></div></div>
+          <div class="route-swap" aria-hidden="true">→</div>
+          <div class="field-card destination-field"><label for="destination">Destination Location</label><div class="input-with-icon"><span class="destination-mark">⌖</span><input id="destination" name="destination" placeholder="Choose or type a destination" required autocomplete="off" aria-autocomplete="list" aria-controls="destinationOptions" aria-expanded="false"><div id="destinationOptions" class="destination-options" role="listbox" aria-label="Suggested destinations" hidden></div></div><small class="help-text">Please enter the place name or district.</small></div>
+        </div>
+
+        <div class="details-grid">
+          <div class="field-card compact"><label for="bsYear">Date (Nepali Calendar - BS)*</label><div class="select-row"><select id="bsDay" aria-label="Nepali day"></select><select id="bsMonth" aria-label="Nepali month"></select><select id="bsYear" aria-label="Nepali year"></select></div></div>
+          <div class="field-card compact"><label for="pickupTime">Pickup Time*</label><div class="input-with-icon"><span class="time-icon">◷</span><input id="pickupTime" type="time" required></div><div class="date-hint">Local time · Nepal (NPT)</div></div>
+          <div class="field-card compact"><label for="passengers">Number of Passengers (Max 5)*</label><div class="passenger-control"><button type="button" id="minusPassenger" aria-label="Remove a passenger">−</button><output id="passengerCount">1</output><button type="button" id="plusPassenger" aria-label="Add a passenger">+</button><span>people</span></div><input id="passengers" name="passengers" type="hidden" value="1"><div class="date-hint">Comfortable seats for your whole crew</div></div>
+          <div class="field-card compact"><label for="phone">Personal Contact Number*</label><div class="input-with-icon"><span class="phone-icon">＋977</span><input id="phone" name="phone" type="tel" placeholder="98XXXXXXXX" pattern="[0-9+() -]{7,18}" required autocomplete="tel"></div><div class="date-hint">We’ll reach out to confirm your ride</div></div>
+        </div>
+        <input type="hidden" id="pickupCoordinates" name="pickupCoordinates">
+        <div class="field-card notes-card"><label for="notes">ANYTHING ELSE WE SHOULD KNOW? <span class="optional">OPTIONAL</span></label><textarea id="notes" name="notes" rows="2" placeholder="Extra luggage, a child seat, a stop along the way…"></textarea></div>
+        <div class="form-bottom"><button class="submit-button" type="submit"><span class="submit-label">🚕 Send booking details via WhatsApp</span><span aria-hidden="true">↗</span></button></div>
+        <div class="send-result" id="sendResult" aria-live="polite" hidden></div>
+      </form>
+      <p class="direct-contact">Prefer to talk? Call <a href="tel:+9779843670623">9843670623</a></p>
+    </section>
+
+
+    <section class="destinations" id="destinations"><div class="section-heading destination-heading"><h2>Popular Destinations</h2></div>
+      <div class="destination-grid">
+        <div class="destination-track">
+          <div class="destination-group">
+            <button class="destination-card card-kathmandu" data-destination="Kathmandu"><img src="assets/pashupatinath.jpg" alt="Pashupatinath Temple at sunset"><span class="place-number">01 / KATHMANDU</span><span class="place-name">Kathmandu</span><span class="place-detail">Pashupatinath Temple</span></button>
+            <button class="destination-card card-pokhara" data-destination="Pokhara"><img src="assets/phewa-lake.jpg" alt="Boats on Phewa Lake in Pokhara"><span class="place-number">02 / POKHARA</span><span class="place-name">Pokhara</span><span class="place-detail">Phewa Lake &amp; Annapurna Range</span></button>
+            <button class="destination-card card-chitwan" data-destination="Chitwan"><img src="assets/chitwan-national-park.jpg" alt="Elephants wading in water at Chitwan National Park"><span class="place-number">03 / CHITWAN</span><span class="place-name">Chitwan</span><span class="place-detail">National Park Wildlife Safari</span></button>
+            <button class="destination-card card-lumbini" data-destination="Lumbini"><img src="assets/lumbini.jpg" alt="Maya Devi Temple and reflecting pool in Lumbini"><span class="place-number">04 / LUMBINI</span><span class="place-name">Lumbini</span><span class="place-detail">Maya Devi Temple</span></button>
+            <button class="destination-card card-palpa" data-destination="Palpa"><img src="assets/palpa-rani-mahal.jpg" alt="Rani Mahal palace in Palpa beside the river"><span class="place-number">05 / PALPA</span><span class="place-name">Palpa</span><span class="place-detail">Rani Mahal</span></button>
+            <button class="destination-card card-ilam" data-destination="Ilam"><img src="assets/Ilam.png" alt="Green tea gardens and hills of Ilam"><span class="place-number">06 / ILAM</span><span class="place-name">Ilam</span><span class="place-detail">Tea Gardens &amp; Green Hills</span></button>
+            <button class="destination-card card-sunsari" data-destination="Sunsari"><img src="assets/sunsari.png" alt="Evening lights across the hills and town in Sunsari"><span class="place-number">07 / SUNSARI</span><span class="place-name">Sunsari</span><span class="place-detail">Koshi Province</span></button>
+            <button class="destination-card card-jhapa" data-destination="Jhapa"><img src="assets/jhapa.png" alt="A calm river and green riverbank in Jhapa"><span class="place-number">08 / JHAPA</span><span class="place-name">Jhapa</span><span class="place-detail">Eastern Terai</span></button>
+            <button class="destination-card card-bardiya" data-destination="Bardiya"><img src="assets/bardiya-national-park.png" alt="A tiger wading through water in Bardiya National Park"><span class="place-number">09 / BARDIYA</span><span class="place-name">Bardiya</span><span class="place-detail">National Park Wildlife</span></button>
+            <button class="destination-card card-rukum" data-destination="Rukum"><img src="assets/rukum.png" alt="Green hills, settlement and lake in Rukum"><span class="place-number">10 / RUKUM</span><span class="place-name">Rukum</span><span class="place-detail">Western Nepal</span></button>
+            <button class="destination-card card-doti" data-destination="Doti"><img src="assets/doti.png" alt="Snowy winter landscape in Doti"><span class="place-number">11 / DOTI</span><span class="place-name">Doti</span><span class="place-detail">Far-West Nepal</span></button>
+            <button class="destination-card card-nuwakot" data-destination="Nuwakot"><img src="assets/nuwakot.png" alt="Traditional hill town and green mountains in Nuwakot"><span class="place-number">12 / NUWAKOT</span><span class="place-name">Nuwakot</span><span class="place-detail">Historic Hill Town</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer><a class="brand footer-brand" href="#home"><span class="brand-mark"><img src="assets/windsor-ev-logo.jpg" alt=""></span><span>E-Drive Cabs<span class="brand-ev"> Nepal</span><small>CLEAN · GREEN · RELIABLE</small></span></a><p>Made for the roads that bring us closer.</p><span>© 2026 E-Drive Cabs · Butwal, Nepal</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

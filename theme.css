@@ -1,0 +1,212 @@
+/* Teal and mountain theme inspired by the supplied E-Drive Cabs Nepal references. */
+:root{--ink:#17343b;--muted:#74838b;--green:#007b83;--deep:#005a66;--lime:#ccebea;--cream:#eef3f7;--line:#d4dfe6;--gold:#ee9c28}
+body{background:#eef3f7;color:#17343b}
+main{display:flex;flex-direction:column}
+.topbar{background:#fff;max-width:none;padding-left:max(5%,calc((100% - 1280px)/2));padding-right:max(5%,calc((100% - 1280px)/2));border-bottom:1px solid #e4ebef}
+.brand{font-family:var(--sans);font-size:17px;font-weight:700;color:#075f6d}
+.brand-mark{background:#087f88;color:#fff}
+.brand small{letter-spacing:1.2px}
+.brand-ev{color:#00a0a4}
+.call-link{border-color:#cce2e3;color:#00747e}
+.hero{order:0;width:100%;max-width:none;min-height:320px;padding:0 7%;margin:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#075364}
+.hero-art{position:absolute;inset:0;height:100%;width:100%;border-radius:0;background:linear-gradient(130deg,#073f56,#087a84 70%,#096879)}
+.hero-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,43,59,.72),rgba(0,75,88,.69)),linear-gradient(0deg,rgba(3,38,47,.24),transparent 70%);z-index:1}
+.hero-art .sun{background:#b9d4cb;opacity:.34}
+.hero-art .peak-back{border-bottom-color:#547783}.hero-art .peak-mid{border-bottom-color:#416c77}.hero-art .peak-front{border-bottom-color:#65828a}
+.hero-art .peak:after{border-bottom-color:#d6e1de;opacity:.75}
+.hero-art .hill-one{background:#215b62}.hero-art .hill-two{background:#194e58}
+.hero-copy{padding:0;z-index:2;max-width:760px}
+.hero-copy .eyebrow{justify-content:center;color:#c6e1db}
+.hero h1{font:700 clamp(40px,5vw,64px)/1.1 var(--sans);letter-spacing:-1.8px;color:#fff;margin:14px 0 13px;text-shadow:0 2px 7px rgba(0,0,0,.18)}
+.hero-copy>p{max-width:none;color:#e2efed;font-size:16px;line-height:1.5}
+.hero-cta,.hero-note,.hero-counter{display:none}
+.vertical-note{color:#b8d1cd;z-index:2}
+.art-caption{z-index:2;color:#dce8e6}
+.destinations{order:1;position:relative;z-index:3;background:#fff;width:min(1280px,calc(100% - 10%));max-width:1280px;margin:-38px auto 40px;padding:34px 36px 36px;border-radius:15px;box-shadow:0 16px 38px rgba(31,54,67,.11)}
+.section-heading{margin-bottom:23px}
+.section-heading h2{font:700 28px/1.2 var(--sans);letter-spacing:-.7px;color:#075f6d}
+.destination-heading h2{display:inline-block;position:relative;padding-bottom:14px}
+.destination-heading h2:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:#ed941d}
+.destination-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.destination-card,.more-card{height:225px;border-radius:12px;box-shadow:0 8px 16px rgba(26,48,54,.13)}
+.destination-card:after{background:linear-gradient(180deg,rgba(0,0,0,.02) 20%,rgba(8,22,24,.76) 100%)}
+.card-bardiya{background:#153d45}
+.card-bardiya img{object-fit:contain;object-position:center;background:#153d45}
+.place-number{display:none}
+.place-name{left:16px;bottom:43px;font:700 20px/1.2 var(--sans);text-shadow:0 1px 4px #1b2929}
+.place-name b{display:none}
+.place-detail{position:absolute;z-index:1;left:16px;right:12px;bottom:16px;font:500 11px/1.45 var(--sans);color:#f2f3ef;text-shadow:0 1px 4px #1b2929}
+.more-card{background:#e7f1f0;border:1px solid #d2e5e3;box-shadow:none}
+.more-icon{color:#007f85}
+.more-card>span:nth-child(2){font-size:23px;color:#075f6d}
+.more-card small{color:#627d80}
+.booking-section{order:2;width:min(1280px,calc(100% - 10%));max-width:1280px;margin:0 auto 50px;padding:39px 36px 31px;background:#fff;border-radius:15px;box-shadow:0 16px 38px rgba(31,54,67,.09)}
+.booking-section .section-heading h2{color:#075f6d}
+.field-card{border-color:#d1dfe7;border-radius:8px}
+.field-card:focus-within{border-color:#21a0a2;box-shadow:0 0 0 2px #e1f3f1}
+.text-action{color:#087e84}
+.route-swap{color:#07868d;border-color:#d3e5e6}
+.submit-button{width:100%;justify-content:center;gap:12px;background:linear-gradient(100deg,#006779,#079e9b);border-radius:9px;padding:17px;font-size:16px;box-shadow:0 7px 16px rgba(0,103,121,.2)}
+.submit-button:hover{background:linear-gradient(100deg,#005764,#087f83)}
+.submit-button span{color:#e1ffff}
+.form-bottom{margin-top:19px}
+.send-result{border-radius:8px}
+.direct-contact a{color:#007b83}
+footer{order:3}
+.route-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+.route-swap{display:none}
+.route-grid>.field-card{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;padding:0;border:0;border-radius:0;box-shadow:none}
+.route-grid>.field-card:focus-within{border-color:transparent;box-shadow:none}
+.route-grid>.field-card>label{grid-column:1/-1;margin:0 0 1px;font-size:13px;font-weight:700;letter-spacing:0;color:#193b44;text-transform:none}
+.route-grid .input-with-icon{grid-column:1;min-height:60px;border:1px solid #cbdce6;border-radius:8px;padding:0 14px;background:#fff;gap:10px}
+.route-grid .input-with-icon:focus-within{border-color:#159a9a;box-shadow:0 0 0 2px #e3f4f3}
+.route-grid .input-with-icon input{font-size:14px}
+.route-grid .field-actions{display:contents}
+.route-grid .microcopy{display:none}
+.route-grid .text-action{min-height:60px;padding:0 17px;border-radius:8px;background:#269f91;color:#fff;font-size:12px;font-weight:700;white-space:nowrap}
+.route-grid [data-map]{background:#ed7355;color:white}
+.route-grid .text-action:hover{filter:brightness(.95);text-decoration:none}
+.route-grid .help-text,.route-grid .map-entry{grid-column:1/-1;margin-top:0}
+.route-grid .help-text{font-size:10px;color:#74838b}
+.route-grid .map-entry{padding-top:8px}
+.route-grid .map-entry input{min-height:46px;border:1px solid #cbdce6;border-radius:7px;padding:0 12px}
+.route-grid .map-entry button{min-height:42px;border-radius:6px;padding:0 16px}
+@media(max-width:850px){.destinations,.booking-section{width:90%;padding-left:24px;padding-right:24px}.destination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.destination-card,.more-card{height:210px}}
+@media(max-width:650px){.route-grid>.field-card{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}.route-grid>.field-card>label,.route-grid .input-with-icon,.route-grid .help-text,.route-grid .map-entry{grid-column:1/-1}.route-grid .text-action{min-height:49px;padding:0 8px;font-size:10px}.route-grid [data-map]{grid-column:auto}.route-grid .field-actions{display:contents}}
+@media(max-width:600px){.hero{min-height:255px;padding:32px 5%}.hero h1{font-size:38px;letter-spacing:-1.1px}.hero-copy>p{font-size:13px}.destinations{width:92%;margin-top:-24px;padding:26px 17px 21px}.booking-section{width:92%;padding:27px 17px 23px}.section-heading h2{font-size:23px}.destination-grid{grid-template-columns:1fr 1fr;gap:10px}.destination-card,.more-card{height:180px}.place-name{font-size:16px;left:12px;bottom:42px}.place-detail{left:12px;bottom:12px;font-size:9px}.submit-button{font-size:12px;padding:15px;gap:7px}.form-bottom{flex-direction:column}.form-bottom p{max-width:none}.topbar .brand{font-size:14px}}
+@media(max-width:370px){.destination-card,.more-card{height:160px}.hero h1{font-size:32px}}
+
+/* Continuous destination photo strip, moving right to left. */
+.destination-heading{justify-content:flex-start;align-items:flex-start;margin-bottom:22px}
+.destination-heading h2{margin:0;padding-bottom:13px}
+.destination-grid{display:block;width:100%;overflow:hidden}
+.destination-track{display:flex;width:max-content;transform:translate3d(0,0,0);will-change:transform}
+.destination-group{display:flex;align-items:stretch;gap:18px;padding-right:18px}
+.destination-card{width:clamp(245px,23vw,320px);flex:0 0 clamp(245px,23vw,320px)}
+.destination-grid{touch-action:pan-y;cursor:grab;user-select:none}
+.destination-grid.is-dragging{cursor:grabbing}
+.destination-grid img{-webkit-user-drag:none}
+.destination-group[aria-hidden="true"]{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.destination-track{will-change:auto}.destination-group[aria-hidden="true"]{display:none}}
+
+/* User supplied cover photograph and circular logo. */
+.hero-art{background-image:url("assets/himalayan-prayer-flags.jpg");background-size:cover;background-position:center 44%}
+.hero-art>div{display:none}
+.hero-art:after{background:linear-gradient(90deg,rgba(0,36,55,.55),rgba(0,47,67,.24)),linear-gradient(0deg,rgba(0,32,45,.3),rgba(0,32,45,.05))}
+.brand-mark{width:46px;height:46px;flex:0 0 46px;overflow:hidden;padding:0;background:#06294a}
+.brand-mark img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.footer-brand .brand-mark{width:38px;height:38px;flex-basis:38px}
+
+/* Larger, rounded booking-form typography matched to the reference image. */
+.booking-section{--form-font:'Poppins',var(--sans)}
+.booking-section .field-card label{font:600 15px/1.4 var(--form-font);letter-spacing:0;color:#142f45;text-transform:none}
+.booking-section .route-grid>.field-card>label{font-size:16px;font-weight:600}
+.booking-section .route-grid .input-with-icon input{font:400 16px var(--form-font)}
+.booking-section .select-row select{font:400 16px var(--form-font);color:#182d3d}
+.booking-section .input-with-icon input[type=time]{font:400 16px var(--form-font)}
+.booking-section .passenger-control output{font:500 19px var(--form-font)}
+.booking-section .passenger-control span{font:400 14px var(--form-font)}
+.booking-section .date-hint{font:400 11px/1.5 var(--form-font)}
+.booking-section .required-note,.booking-section .optional{font:500 12px var(--form-font);letter-spacing:0;color:#687984}
+.booking-section .submit-button{font:600 19px var(--form-font)}
+@media(max-width:600px){.booking-section .field-card label{font-size:14px}.booking-section .route-grid>.field-card>label{font-size:15px}.booking-section .select-row select,.booking-section .input-with-icon input[type=time],.booking-section .route-grid .input-with-icon input{font-size:15px}.booking-section .submit-button{font-size:16px}}
+
+/* Make the trip details feel like a clear, polished booking panel. */
+.booking-section .details-grid .field-card.compact{
+  position:relative;
+  overflow:hidden;
+  padding:20px 18px 17px;
+  border:1px solid #c9e2e3;
+  border-radius:13px;
+  background:linear-gradient(145deg,#fff 8%,#f2f9fa 100%);
+  box-shadow:inset 0 3px 0 #0b8f91,0 7px 18px rgba(18,78,91,.07);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.booking-section .details-grid .field-card.compact:hover{
+  transform:translateY(-2px);
+  border-color:#79c2c1;
+  box-shadow:inset 0 3px 0 #ef9b2d,0 11px 22px rgba(18,78,91,.11);
+}
+.booking-section .details-grid .field-card.compact label{
+  margin-bottom:13px;
+  color:#075f6d;
+  font:700 15px/1.4 'DM Sans',var(--sans);
+  letter-spacing:.01em;
+}
+.booking-section .details-grid .select-row select,
+.booking-section .details-grid .input-with-icon input,
+.booking-section .details-grid .passenger-control output{
+  font-family:'DM Sans',var(--sans);
+  font-weight:600;
+}
+.booking-section .details-grid .date-hint{color:#748991}
+.booking-section .notes-card{border-radius:13px;background:linear-gradient(145deg,#fff,#f7fafb)}
+@media(max-width:600px){.booking-section .details-grid .field-card.compact{padding:15px 12px 13px}.booking-section .details-grid .field-card.compact label{font-size:13px;margin-bottom:10px}}
+
+/* Mobile-friendly destination picker with keyboard and touch support. */
+.booking-section .route-grid{position:relative;z-index:5}
+.booking-section .details-grid{position:relative;z-index:1}
+.destination-field{z-index:10}
+.destination-field .input-with-icon{position:relative}
+.destination-options{
+  position:absolute;top:calc(100% + 8px);left:-1px;right:-1px;z-index:30;
+  max-height:min(280px,45vh);overflow:auto;padding:6px;
+  border:1px solid #cbdfe4;border-radius:12px;background:#fff;
+  box-shadow:0 14px 32px rgba(19,60,74,.18);
+}
+.destination-options[hidden]{display:none}
+.destination-options:not([hidden]){animation:destination-menu-in .18s ease-out both}
+.destination-option{
+  display:block;width:100%;padding:12px 14px;border:0;border-radius:8px;
+  background:#fff;color:#17343b;text-align:left;font:600 14px 'DM Sans',var(--sans);cursor:pointer;
+}
+.destination-option:hover,.destination-option[aria-selected="true"]{background:#e9f6f5;color:#006b72}
+.destination-option:focus-visible{outline:2px solid #159a9a;outline-offset:-2px}
+@keyframes destination-menu-in{from{opacity:0;transform:translateY(-5px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Reveal the booking details as they enter view and give the call to action a soft sheen. */
+.booking-section .reveal-on-scroll{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.25,1);transition-delay:var(--reveal-delay,0ms)}
+.booking-section .reveal-on-scroll.is-revealed{opacity:1;transform:translateY(0)}
+.booking-section .section-heading h2{letter-spacing:-.035em}
+.booking-section .submit-button{position:relative;overflow:hidden;isolation:isolate;transition:transform .2s ease,box-shadow .2s ease}
+.booking-section .submit-button:before{content:'';position:absolute;z-index:0;inset:-40% auto -40% -35%;width:24%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:button-sheen 4.5s ease-in-out infinite}
+.booking-section .submit-button>span{position:relative;z-index:1}
+.booking-section .submit-button:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,103,121,.27)}
+.booking-section .submit-label{display:inline-block;animation:button-label-bob 3.2s ease-in-out infinite}
+@keyframes button-sheen{0%,65%{left:-35%}100%{left:125%}}
+@keyframes button-label-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
+@media(prefers-reduced-motion:reduce){.booking-section .reveal-on-scroll{opacity:1;transform:none;transition:none}.destination-options:not([hidden]){animation:none}.booking-section .submit-button:before,.booking-section .submit-label{animation:none}.booking-section .submit-button,.booking-section .details-grid .field-card.compact{transition:none}}
+
+/* Keep the site navigation close and add a restrained arrival/hover motion. */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  box-shadow:0 4px 18px rgba(13,62,75,.045);
+}
+.topbar>.brand,.topbar>nav,.topbar>.call-link{animation:header-arrive .7s cubic-bezier(.2,.7,.25,1) both}
+.topbar>nav{animation-delay:100ms}
+.topbar>.call-link{animation-delay:180ms}
+.topbar nav a{position:relative;padding:9px 0;transition:color .2s ease}
+.topbar nav a:after{
+  content:'';position:absolute;left:0;right:100%;bottom:2px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,#087f88,#ee9c28);transition:right .24s ease;
+}
+.topbar nav a:hover,.topbar nav a:focus-visible{color:#006b72}
+.topbar nav a:hover:after,.topbar nav a:focus-visible:after{right:0}
+.topbar .brand-ev{background:linear-gradient(100deg,#00a0a4 0%,#ee9c28 45%,#00a0a4 90%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:brand-accent 6s ease-in-out infinite}
+.topbar .call-link{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.topbar .call-link:hover{transform:translateY(-2px);border-color:#8cc9c8;box-shadow:0 7px 17px rgba(0,103,121,.12)}
+@keyframes header-arrive{from{opacity:0;transform:translateY(-9px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes brand-accent{0%,100%{background-position:0% center}50%{background-position:100% center}}
+@media(prefers-reduced-motion:reduce){.topbar>.brand,.topbar>nav,.topbar>.call-link,.topbar .brand-ev{animation:none}.topbar nav a,.topbar nav a:after,.topbar .call-link{transition:none}}
+
+/* Let the opening message and closing footer arrive with the same gentle motion. */
+.hero-copy>.eyebrow{animation:hero-text-arrive .7s cubic-bezier(.2,.7,.25,1) .08s both}
+.hero-copy>h1{animation:hero-text-arrive .85s cubic-bezier(.2,.7,.25,1) .18s both}
+.hero-copy>p{animation:hero-text-arrive .75s cubic-bezier(.2,.7,.25,1) .32s both}
+footer .footer-reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.25,1);transition-delay:var(--footer-delay,0ms)}
+footer .footer-reveal.is-revealed{opacity:1;transform:translateY(0)}
+@keyframes hero-text-arrive{from{opacity:0;transform:translateY(20px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){.hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>p{animation:none}footer .footer-reveal{opacity:1;transform:none;transition:none}}
