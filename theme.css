@@ -91,7 +91,7 @@ footer{order:3}
 @media(prefers-reduced-motion:reduce){.destination-track{will-change:auto}.destination-group[aria-hidden="true"]{display:none}}
 
 /* User supplied cover photograph and circular logo. */
-.hero-art{background-image:url("assets/himalayan-prayer-flags.jpg");background-size:cover;background-position:center 44%}
+.hero-art{background-image:url("himalayan-prayer-flags.jpg");background-size:cover;background-position:center 44%}
 .hero-art>div{display:none}
 .hero-art:after{background:linear-gradient(90deg,rgba(0,36,55,.55),rgba(0,47,67,.24)),linear-gradient(0deg,rgba(0,32,45,.3),rgba(0,32,45,.05))}
 .brand-mark{width:46px;height:46px;flex:0 0 46px;overflow:hidden;padding:0;background:#06294a}
